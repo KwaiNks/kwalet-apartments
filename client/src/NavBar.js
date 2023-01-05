@@ -1,35 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import KwaLetLogo from "./images/KwaLet-logo.png";
+import { FaAlignRight} from "react-icons/fa";
 
-function NavBar({ user, setUser }) {
-  function handleLogoutClick() {
-    fetch("/logout", { method: "DELETE" }).then((response) => {
-      if (response.ok) {
-        setUser(null);
-      }
-    });
-  }
+
+function NavBar({ user, handleLogoutClick}) {
+
+  // const[isOpen, setIsOpen]= useState(false)
+
+  // let handleToggle = () => {
+  //   this.setIsOpen({isOpen: !isOpen})
+  // }
 
   return (
-    // <header>
+   
     <nav className='navbar'>
-      <div>
+    {/* <div className="nav-center">
+    <div className="nav-header"> */}
+    <a href="/">
+    <img src={KwaLetLogo} alt="KwaLet" height={100}/>
+    </a>
         <Link className="link" to="/">Home</Link>
-      </div>
-      <div className="navContainer">
+        {/* <button type="button" className="nav-btn" onClick={handleToggle}>
+          <FaAlignRight className="nav-icon" /> */}
+        {/* </button> */}
         {user ? (
+          <>
+          <Link className="link" to="/contactus"> Contact Us </Link>
+          <Link className="link" to="/reservations"> Reservation </Link>
           <button onClick={handleLogoutClick}>Logout</button>
+          </>
         ) : (
           <>
             <Link className="link" to="/signup"> Signup </Link>
             <Link className="link" to="/login"> Login </Link>
             <Link className="link" to="/contactus"> Contact Us </Link>
-            <Link className="link" to="/apartment"> Apply </Link>
           </>
         )}
-      </div>
-      </nav>
-    // </header>
+      
+    {/* </div>
+    <ul className={isOpen?"nav-links show-nav":"nav-links"}></ul>
+    </div> */}
+    </nav>
+   
   );
 }
 

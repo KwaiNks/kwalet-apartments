@@ -36,22 +36,22 @@ function Signup({ setUser }) {
         <h1>Sign Up</h1>
 
         <label htmlFor="username">Username</label>
-        <input type="text" id="username" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input type="text" id="username" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username..." />
 
         <label htmlFor="email">Email</label>
-        <input type="text" id="email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)}  />
-
+        <input type="text" id="email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email..." />
+        <p></p>
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" />
+        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" placeholder="Password..."/>
 
         <label htmlFor="password">Password Confirmation</label>
-        <input type="password" id="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} autoComplete="current-password" />
-       
+        <input type="password" id="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} autoComplete="current-password" placeholder="Password Confirmation..." />
+        <p></p>
         <button type="submit">Sign Up</button>
 
         <p>
                     Already have an account? {" "}
-                    <span className='link' onClick={gotoLoginPage}>
+                    <span className='low-link' onClick={gotoLoginPage}>
                         Login
                     </span>
                 </p>
