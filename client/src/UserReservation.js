@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UserReservationList from "./UserReservationList.js";
 
-function UserReservation({apartments, reservation}) {
+function UserReservation({reservation}) {
 
   const [userApplications, setuserApplications] = useState([]);
 
@@ -18,7 +18,6 @@ function UserReservation({apartments, reservation}) {
       <UserReservationList
         key={userApplication.id}
         userApplication={userApplication}
-        // apartments={apartments} 
         reservation={reservation}
       />
     );
@@ -26,7 +25,7 @@ function UserReservation({apartments, reservation}) {
 
   return (
     <div>
-      <h2>My Application</h2>
+      <h2>My Applications</h2>
       {renderUserApplications}
     </div>
   );

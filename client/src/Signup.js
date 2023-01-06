@@ -31,8 +31,8 @@ function Signup({ setUser }) {
   const gotoLoginPage = () => navigate("/login");
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+
+      <form className="signup-form" onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
 
         <label htmlFor="username">Username</label>
@@ -40,13 +40,13 @@ function Signup({ setUser }) {
 
         <label htmlFor="email">Email</label>
         <input type="text" id="email" autoComplete="off" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email..." />
-        <p></p>
+    
         <label htmlFor="password">Password</label>
         <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" placeholder="Password..."/>
 
         <label htmlFor="password">Password Confirmation</label>
         <input type="password" id="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} autoComplete="current-password" placeholder="Password Confirmation..." />
-        <p></p>
+
         <button type="submit">Sign Up</button>
 
         <p>
@@ -56,7 +56,7 @@ function Signup({ setUser }) {
                     </span>
                 </p>
       </form>
-    </div>
+   
   );
 }
 

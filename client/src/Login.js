@@ -27,30 +27,33 @@ function Login({ setUser }) {
   const goToSignupPage = () => navigate("/signup");
 
   return (
-    <div>
+    <div className="loginpage">
       <form onSubmit={handleSubmit}>
         <h1>Login</h1>
 
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          autoComplete="off"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username..."
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          autoComplete="current-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password..."
-        />
-        <p></p>
-        <button type="submit">Login</button>
+        <div className="logininputs">
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            autoComplete="off"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Username..."
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password..."
+          />
+          <button type="submit">Login</button>
+        </div>
+
+
         <p>
           Don't have an account?{" "}
           <span className="lowlink" onClick={goToSignupPage}>

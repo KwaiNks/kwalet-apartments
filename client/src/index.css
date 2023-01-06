@@ -70,32 +70,6 @@ button{
   cursor: pointer;
 }
 
-/* .link a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  margin: 0 1rem;
-  color: var(--mainBlack);
-  transition: var(--mainTransition);
-  text-align: center;
-  font-size: 5rem;
-  font-weight: 600;
-  letter-spacing: var(--mainSpacing);
-} */
-
-/* .link a:hover {
-  color: coral;
-} */
-
-
-/* .App {
-  font-family: sans-serif;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-size: cover;
-  overflow-y: scroll;
-} */
 .apartment-details{
   width: 30rem;
 
@@ -119,4 +93,86 @@ button{
 
 label{
   font-weight: bold;
+}
+
+h2{
+  text-align: center;
+}
+
+lengthofstay{
+  font-weight: bold;
+}
+
+#welcome{
+  margin-left: 1%;
+}
+
+#logoutButton{
+background-color: white;
+cursor: pointer;
+    color: teal;
+    padding-top: 30px;
+    float: right;
+    font-size: medium;
+    font-weight: bold;
+    margin-left: 1.5%;
+   
+    margin: 4px 2px;
+    cursor: pointer;
+ 
+}
+
+.loginpage{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.logininputs{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.application{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px
+}
+
+/* .application input {
+  width: 16rem;
+} */
+
+
+.input-application {
+  width: 16rem;
+}
+
+#username {
+  width: 100%;
+}
+
+#password {
+  width: 100%;
+}
+
+.signup-form {
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#password_confirmation {
+  width: 100%;
+}
+
+#email {
+  width: 100%;
 }

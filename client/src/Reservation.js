@@ -123,9 +123,11 @@ function Reservation({ addReservation, user }) {
   return (
     <div id="newReservationForm">
       <h2>Application Form</h2>
-      <form onSubmit={handleApplicationForm}>
+      <form className="application" onSubmit={handleApplicationForm}>
+        <div>
         <label htmlFor="firstName">First Name </label>
         <input
+        className="input-application"
           type="text"
           value={firstname}
           onChange={onFirstNameChange}
@@ -135,6 +137,7 @@ function Reservation({ addReservation, user }) {
         />
         <label htmlFor="lastName">Last Name </label>
         <input
+         className="input-application"
           type="text"
           value={lastname}
           onChange={onLastNameChange}
@@ -144,6 +147,7 @@ function Reservation({ addReservation, user }) {
         />
         <label htmlFor="address">Address </label>
         <input
+         className="input-application"
           type="text"
           value={address}
           onChange={onAddressChange}
@@ -151,17 +155,20 @@ function Reservation({ addReservation, user }) {
           placeholder="Address..."
           required
         />
-        <p></p>
         <label htmlFor="date">Date of Birth </label>
         <input
+         className="input-application"
           type="date"
           value={date_of_birth}
           onChange={onDateOfBirthChange}
           name="date"
           required
         />
+        </div>
+        <div>
         <label htmlFor="sex">Sex </label>
         <input
+         className="input-application"
           type="text"
           value={sex}
           onChange={onSexChange}
@@ -171,6 +178,7 @@ function Reservation({ addReservation, user }) {
         />
         <label htmlFor="telephone">Telephone </label>
         <input
+         className="input-application"
           type="number"
           value={tel_no}
           onChange={onTelephoneNumberChange}
@@ -178,9 +186,9 @@ function Reservation({ addReservation, user }) {
           placeholder="Telephone..."
           required
         />
-        <p></p>
         <label htmlFor="nationality">Nationality </label>
         <input
+         className="input-application"
           type="text"
           value={nationality}
           onChange={onNationalityChange}
@@ -190,6 +198,7 @@ function Reservation({ addReservation, user }) {
         />
         <label htmlFor="idNumber">ID Number </label>
         <input
+         className="input-application"
           type="number"
           value={id_number}
           onChange={onIdNumberChange}
@@ -197,8 +206,11 @@ function Reservation({ addReservation, user }) {
           placeholder="ID Number..."
           required
         />
+        </div>
+        <div>
         <label htmlFor="email">Email </label>
         <input
+         className="input-application"
           type="text"
           value={email}
           onChange={onEmailChange}
@@ -206,9 +218,9 @@ function Reservation({ addReservation, user }) {
           placeholder="Email..."
           required
         />
-        <p></p>
         <label htmlFor="occupation">Occupation </label>
         <input
+         className="input-application"
           type="text"
           value={occupation}
           onChange={onOccupationChange}
@@ -218,6 +230,7 @@ function Reservation({ addReservation, user }) {
         />
         <label htmlFor="dateOfEntry">Date of Entry </label>
         <input
+         className="input-application"
           type="date"
           min={currentDateString}
           value={date_of_entry}
@@ -227,6 +240,7 @@ function Reservation({ addReservation, user }) {
         />
         <label htmlFor="lengthOfStay">Length of Stay </label>
         <input
+         className="input-application"
           type="number"
           value={length_of_stay}
           onChange={onLengthOfStayChange}
@@ -234,9 +248,12 @@ function Reservation({ addReservation, user }) {
           placeholder="Length of Stay..."
           required
         />
-        <p></p>
+        </div>
+        <div>
+        <lengthofstay>Months</lengthofstay>
         <label htmlFor="firstReferenceName">First Reference Name </label>
         <input
+         className="input-application"
           type="text"
           value={first_ref_name}
           onChange={onFirstReferenceNameChange}
@@ -246,6 +263,7 @@ function Reservation({ addReservation, user }) {
         />
         <label htmlFor="firstReferenceNumber">First Reference Number </label>
         <input
+         className="input-application"
           type="number"
           value={first_ref_number}
           onChange={onFirstReferenceNumberChange}
@@ -253,17 +271,21 @@ function Reservation({ addReservation, user }) {
           placeholder="First Reference Number.."
           required
         />
+        </div>
+        <div>
         <label htmlFor="secondReferenceName">Second Reference Name </label>
         <input
+         className="input-application"
           type="text"
           value={second_ref_name}
-          onChange={onSecondReferenceNameChange}
+          onChange={onSecondReferenceNameChange} 
           name="secondReferenceName"
           placeholder="Second Reference Name..."
           required
         />
         <label htmlFor="secondReferenceNumber">Second Reference Number </label>
         <input
+         className="input-application"
           type="number"
           value={second_ref_number}
           onChange={onSecondReferenceNumberChange}
@@ -271,7 +293,7 @@ function Reservation({ addReservation, user }) {
           placeholder="Second Reference Number..."
           required
         />
-        <p></p>
+        </div>
         <button type="submit">Submit</button>
       </form>
     </div>
