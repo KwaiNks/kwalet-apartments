@@ -13,18 +13,18 @@ function Login({ setUser }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password}),
+      body: JSON.stringify({ username, password }),
     }).then((response) => {
       if (response.ok) {
-        response.json().then((user) =>{ 
-          setUser(user)});
-          navigate("/");
+        response.json().then((user) => {
+          setUser(user);
+        });
+        navigate("/");
       }
     });
   }
 
-
-  const goToSignupPage = () => navigate("/signup")
+  const goToSignupPage = () => navigate("/signup");
 
   return (
     <div>
@@ -32,14 +32,31 @@ function Login({ setUser }) {
         <h1>Login</h1>
 
         <label htmlFor="username">Username</label>
-        <input type="text" id="username" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username..." />
+        <input
+          type="text"
+          id="username"
+          autoComplete="off"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Username..."
+        />
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password..." />
+        <input
+          type="password"
+          id="password"
+          autoComplete="current-password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password..."
+        />
         <p></p>
         <button type="submit">Login</button>
         <p>
-        Don't have an account? {" "}
-        <span className='lowlink' onClick={goToSignupPage}> Sign up </span>
+          Don't have an account?{" "}
+          <span className="lowlink" onClick={goToSignupPage}>
+            {" "}
+            Sign up{" "}
+          </span>
         </p>
       </form>
     </div>

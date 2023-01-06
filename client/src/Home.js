@@ -2,21 +2,30 @@ import ApartmentList from "./ApartmentList";
 
 function Home({ user, apartments, navigate }) {
 
-  console.log(apartments)
-  
-    if (user) {
-      return (<>
-      <h1>Welcome, {user.username}!</h1>
-      {/* <img className="apartment_image" src={apartments.image} alt={apartments.apt_number}/> */}
-      <ApartmentList apartments={apartments} navigate={navigate}/>
-      </>);
-    } else {
-      return (<> 
-      <h1>KwaLet Apartments</h1>
-      <img className="apartment_image" src={apartments.image} alt={apartments.apt_number}/>
-       </> )
-    }
+  if (user) {
+    return (
+      <>
+        <h3>Welcome, {user.username}!</h3>
+        <h2>Featured Apartments</h2>
+        <ApartmentList
+          apartments={apartments}
+          navigate={navigate}
+          user={user}
+        />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <h2>Featured Apartments</h2>
+        <ApartmentList
+          apartments={apartments}
+          navigate={navigate}
+          user={user}
+        />
+      </>
+    );
   }
-  
+}
+
 export default Home;
-  

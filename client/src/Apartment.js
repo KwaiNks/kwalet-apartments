@@ -1,18 +1,32 @@
+function Apartment({ apartment, navigate, user }) {
+    
+  function handleClick(apartment) {
+    if (user) {
+      navigate("/reservations", { state: { apartment_id: apartment.id } });
+    } else {
+      navigate("/login");
+    }
+  }
 
-function Apartment({apartment, navigate}){
-function handleClick(apartment){
-console.log(apartment.id)
-navigate("/reservations", {state:{apartment_id:apartment.id}})
-
+  return (
+    <div className="apartment-details">
+      <div className="imageContainer">
+        <img
+          className="image"
+          src={apartment.image}
+          alt={apartment.apt_number}
+        />
+        {"   " + apartment.apt_type + "     "} | Monthly Rent: $
+        {"   " + apartment.price + "      "} |
+        {apartment.status ? "  Available   " : "   Not Available   "}
+        <button
+          disabled={!apartment.status}
+          onClick={() => handleClick(apartment)}
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+  );
 }
-
-    return(
-        <div className="apartment-details">
-            <div className="imageContainer">
-         <img className="image" src={apartment.image} alt={apartment.apt_number}/>
-         <button onClick={() => handleClick(apartment)}>Apply</button>
-         </div>
-        </div>
-    )
-}
-export default Apartment
+export default Apartment;

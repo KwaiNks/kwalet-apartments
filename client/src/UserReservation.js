@@ -1,25 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import UserReservationList from './U serReservationList.js'
+import React, { useState, useEffect } from "react";
+import UserReservationList from "./UserReservationList.js";
 
-function UserReservation(){
+function UserReservation({apartments, reservation}) {
 
-    const [userReservations, setUserReservations] = useState([])
+  const [userApplications, setuserApplications] = useState([]);
 
-    useEffect(() => {
-        fetch('/reservations')
-        .then(response => response.json())
-        .then(data => setUserReservations(data))
-    }, [])
+  useEffect(() => {
+    fetch("/reservations")
+      .then((response) => response.json())
+      .then((data) => setuserApplications(data));
+  }, []);
 
-    const renderUserReservations = userReservations.map((userReservation) => {
-        return <UserReservationList key={userReservation.id} userReservation={userReservation}/>
-        })
+  console.log(userApplications)
 
-    return(
+  const renderUserApplications = userApplications.map((userApplication) => {
+    return (
+      <UserReservationList
+        key={userApplication.id}
+        userApplication={userApplication}
+        // apartments={apartments} 
+        reservation={reservation}
+      />
+    );
+  });
+
+  return (
     <div>
-        <h2>My Reservation</h2>
-        {renderUserReservations}
+      <h2>My Application</h2>
+      {renderUserApplications}
     </div>
-    )
+  );
 }
-export default UserReservation
+export default UserReservation;

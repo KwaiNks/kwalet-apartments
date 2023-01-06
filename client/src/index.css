@@ -17,21 +17,38 @@ code {
     margin: 20px auto;
   }
   
-  Form {
+.contactMessage {
     border: 1px solid lightgray;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
+  }
+
+  #newReservationForm{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 40px;
+  }
+
+  .myApplications{
+    border: 1px solid lightgray;
+    border-radius: 10px;
   }
 
 .link {
     cursor: pointer;
-    color: rgb(146, 156, 39);
+    color: teal;
     padding-top: 30px;
     float: right;
+    font-size: medium;
+    font-weight: bold;
+    margin-left: 1.5%;
+   
 }
 
 input:focus {
   background-color: lightblue;
+  border-color: coral;
 }
 
 input {
@@ -53,7 +70,7 @@ button{
   cursor: pointer;
 }
 
-.link a {
+/* .link a {
   display: inline-block;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -61,25 +78,24 @@ button{
   color: var(--mainBlack);
   transition: var(--mainTransition);
   text-align: center;
-  font-size: 1rem;
+  font-size: 5rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
-}
+} */
 
-.link a:hover {
-  color: var(--primaryColor);
-}
+/* .link a:hover {
+  color: coral;
+} */
 
 
-.App {
+/* .App {
   font-family: sans-serif;
-  background-image: url("./images/KwaLet_Background.png");
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
   overflow-y: scroll;
-}
+} */
 .apartment-details{
   width: 30rem;
 
@@ -91,7 +107,7 @@ button{
 
 .imageContainer{
   height: 300;
-  border: 3px black solid;
+  border: 3px coral solid;
 }
 
 .apartmentList {
@@ -99,4 +115,8 @@ button{
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+label{
+  font-weight: bold;
 }

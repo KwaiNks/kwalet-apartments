@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  # resources :userreservations
+  resources :userreservations
   resources :reservations
   resources :apartments
   resources :users
