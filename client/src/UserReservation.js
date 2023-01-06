@@ -18,7 +18,6 @@ function UserReservation({reservation}) {
       <UserReservationList
         key={userApplication.id}
         userApplication={userApplication}
-        reservation={reservation}
       />
     );
   });

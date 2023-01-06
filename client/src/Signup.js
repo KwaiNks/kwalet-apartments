@@ -23,7 +23,10 @@ function Signup({ setUser }) {
       }),
     }).then((response) => {
       if (response.ok) {
-        response.json().then((user) => setUser(user));
+        response.json().then((user) =>{
+           setUser(user);
+      });
+        navigate("/");
       }
     });
   }
@@ -51,7 +54,7 @@ function Signup({ setUser }) {
 
         <p>
                     Already have an account? {" "}
-                    <span className='low-link' onClick={gotoLoginPage}>
+                    <span className='lowlink' onClick={gotoLoginPage}>
                         Login
                     </span>
                 </p>
