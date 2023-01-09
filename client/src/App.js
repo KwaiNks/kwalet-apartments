@@ -81,7 +81,7 @@ function App() {
                 <Reservation addReservation={addReservation} user={user} />
               }
             ></Route>
-            <Route exact path="/userreservations" element={ <UserReservation apartments={apartments} reservation={reservation}/> }></Route>
+            <Route exact path="/userreservations" element={ <UserReservation apartments={apartments}/> }></Route>
           </Routes>
         ) : (
           // if logged out

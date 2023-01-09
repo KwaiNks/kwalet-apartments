@@ -1,0 +1,367 @@
+    // <div id="newReservationForm">
+    //   <h2>Application Form</h2>
+    //   <form className="application" onSubmit={handleApplicationForm}>
+
+    //     <div >
+    //     <label htmlFor="firstName">First Name </label>
+    //     <input
+    //     className="input-application"
+    //       type="text"
+    //       value={toSend.firstname}
+    //       onChange={handleChange}
+    //       name="firstName"
+    //       placeholder="First Name..."
+    //       required
+    //     />
+    //     <label htmlFor="lastName">Last Name </label>
+    //     <input
+    //      className="input-application"
+    //       type="text"
+    //       value={toSend.lastname}
+    //       onChange={handleChange}
+    //       name="lastName"
+    //       placeholder="Last Name..."
+    //       required
+    //     />
+    //     <label htmlFor="address">Address </label>
+    //     <input
+    //      className="input-application"
+    //       type="text"
+    //       value={toSend.address}
+    //       onChange={handleChange}
+    //       name="address"
+    //       placeholder="Address..."
+    //       required
+    //     />
+    //     <label htmlFor="date">Date of Birth </label>
+    //     <input
+    //      className="input-application"
+    //       type="date"
+    //       value={toSend.date_of_birth}
+    //       onChange={handleChange}
+    //       name="date"
+    //       required
+    //     />
+    //     </div>
+
+    //     <div>
+    //     <label htmlFor="sex">Sex </label>
+    //     <select className="input-application" onChange={handleChange} required>
+    //     <option value="" >Select Gender...</option>
+    //     <option value={toSend.sex} >Female</option>
+    //     <option value={toSend.sex} >Male</option>
+    //     </select>
+        
+       
+    //     <label htmlFor="telephone">Telephone </label>
+    //     <input
+    //      className="input-application"
+    //       type="number"
+    //       value={toSend.tel_no}
+    //       onChange={handleChange}
+    //       name="telephone"
+    //       placeholder="Telephone..."
+    //       required
+    //     />
+    //     <label htmlFor="nationality">Nationality </label>
+    //     <input
+    //      className="input-application"
+    //       type="text"
+    //       value={toSend.nationality}
+    //       onChange={handleChange}
+    //       name="nationality"
+    //       placeholder="Nationality..."
+    //       required
+    //     />
+    //     <label htmlFor="idNumber">ID Number </label>
+    //     <input
+    //      className="input-application"
+    //       type="number"
+    //       value={toSend.id_number}
+    //       onChange={handleChange}
+    //       name="idNumber"
+    //       placeholder="ID Number..."
+    //       required
+    //     />
+    //     </div>
+
+    //     <div>
+    //     <label htmlFor="email">Email </label>
+    //     <input
+    //      className="input-application"
+    //       type="text"
+    //       value={toSend.email}
+    //       onChange={handleChange}
+    //       name="email"
+    //       placeholder="Email..."
+    //       required
+    //     />
+    //     <label htmlFor="occupation">Occupation </label>
+    //     <input
+    //      className="input-application"
+    //       type="text"
+    //       value={toSend.occupation}
+    //       onChange={handleChange}
+    //       name="occupation"
+    //       placeholder="Occupation..."
+    //       required
+    //     />
+    //     <label htmlFor="dateOfEntry">Date of Entry </label>
+    //     <input
+    //      className="input-application"
+    //       type="date"
+    //       min={currentDateString}
+    //       value={toSend.date_of_entry}
+    //       onChange={handleChange}
+    //       name="date"
+    //       required
+    //     />
+    //     <label htmlFor="lengthOfStay">Length of Stay </label>
+    //     <input
+    //      className="input-application"
+    //       type="number"
+    //       value={toSend.length_of_stay}
+    //       onChange={handleChange}
+    //       name="lengthOfStay"
+    //       placeholder="Length of Stay..."
+    //       required
+    //     />
+    //      <lengthofstay> Months </lengthofstay>
+    //     </div>
+    //     <div>
+      
+    //     <label htmlFor="firstReferenceName">Reference Name </label>
+    //     <input
+    //      className="input-application"
+    //       type="text"
+    //       value={toSend.first_ref_name}
+    //       onChange={handleChange}
+    //       name="firstReferenceName"
+    //       placeholder="First Reference Name..."
+    //       required
+    //     />
+    //     <label htmlFor="firstReferenceNumber">Reference Number </label>
+    //     <input
+    //      className="input-application"
+    //       type="number"
+    //       value={toSend.first_ref_number}
+    //       onChange={handleChange}
+    //       name="firstReferenceNumber"
+    //       placeholder="First Reference Number.."
+    //       required
+    //     />
+    //     </div>
+    //     <div>
+    //     <label htmlFor="secondReferenceName">Reference Name </label>
+    //     <input
+    //      className="input-application"
+    //       type="text"
+    //       value={toSend.second_ref_name}
+    //       onChange={handleChange} 
+    //       name="secondReferenceName"
+    //       placeholder="Second Reference Name..."
+    //       required
+    //     />
+    //     <label htmlFor="secondReferenceNumber">Reference Number </label>
+    //     <input
+    //      className="input-application"
+    //       type="number"
+    //       value={toSend.second_ref_number}
+    //       onChange={handleChange}
+    //       name="secondReferenceNumber"
+    //       placeholder="Second Reference Number..."
+    //       required
+    //     />
+    //     </div>
+    //     <Button type="submit">Submit</Button>
+    //   </form>
+    // </div>
+
+
+
+
+
+
+
+
+//   return (
+//     <div id="newReservationForm">
+//       <h2>Application Form</h2>
+//       <form className="application" onSubmit={handleApplicationForm}>
+//         <div>
+//         <label htmlFor="firstName">First Name </label>
+//         <input
+//         className="input-application"
+//           type="text"
+//           value={toSend.firstname}
+//           onChange={handleChange}
+//           name="firstName"
+//           placeholder="First Name..."
+//           required
+//         />
+//         <label htmlFor="lastName">Last Name </label>
+//         <input
+//          className="input-application"
+//           type="text"
+//           value={toSend.lastname}
+//           onChange={handleChange}
+//           name="lastName"
+//           placeholder="Last Name..."
+//           required
+//         />
+//         <label htmlFor="address">Address </label>
+//         <input
+//          className="input-application"
+//           type="text"
+//           value={toSend.address}
+//           onChange={handleChange}
+//           name="address"
+//           placeholder="Address..."
+//           required
+//         />
+//         <label htmlFor="date">Date of Birth </label>
+//         <input
+//          className="input-application"
+//           type="date"
+//           value={toSend.date_of_birth}
+//           onChange={handleChange}
+//           name="date"
+//           required
+//         />
+//         </div>
+
+//         <div>
+//         <label htmlFor="sex">Sex </label>
+//         <select className="input-application" onChange={handleChange} required>
+//         <option value="" >Select Gender...</option>
+//         <option value={toSend.sex} >Female</option>
+//         <option value={toSend.sex} >Male</option>
+//         </select>
+        
+       
+//         <label htmlFor="telephone">Telephone </label>
+//         <input
+//          className="input-application"
+//           type="number"
+//           value={toSend.tel_no}
+//           onChange={handleChange}
+//           name="telephone"
+//           placeholder="Telephone..."
+//           required
+//         />
+//         <label htmlFor="nationality">Nationality </label>
+//         <input
+//          className="input-application"
+//           type="text"
+//           value={toSend.nationality}
+//           onChange={handleChange}
+//           name="nationality"
+//           placeholder="Nationality..."
+//           required
+//         />
+//         <label htmlFor="idNumber">ID Number </label>
+//         <input
+//          className="input-application"
+//           type="number"
+//           value={toSend.id_number}
+//           onChange={handleChange}
+//           name="idNumber"
+//           placeholder="ID Number..."
+//           required
+//         />
+//         </div>
+
+//         <div>
+//         <label htmlFor="email">Email </label>
+//         <input
+//          className="input-application"
+//           type="text"
+//           value={toSend.email}
+//           onChange={handleChange}
+//           name="email"
+//           placeholder="Email..."
+//           required
+//         />
+//         <label htmlFor="occupation">Occupation </label>
+//         <input
+//          className="input-application"
+//           type="text"
+//           value={toSend.occupation}
+//           onChange={handleChange}
+//           name="occupation"
+//           placeholder="Occupation..."
+//           required
+//         />
+//         <label htmlFor="dateOfEntry">Date of Entry </label>
+//         <input
+//          className="input-application"
+//           type="date"
+//           min={currentDateString}
+//           value={toSend.date_of_entry}
+//           onChange={handleChange}
+//           name="date"
+//           required
+//         />
+//         <label htmlFor="lengthOfStay">Length of Stay </label>
+//         <input
+//          className="input-application"
+//           type="number"
+//           value={toSend.length_of_stay}
+//           onChange={handleChange}
+//           name="lengthOfStay"
+//           placeholder="Length of Stay..."
+//           required
+//         />
+//          <lengthofstay> Months </lengthofstay>
+//         </div>
+//         <div>
+      
+//         <label htmlFor="firstReferenceName">Reference Name </label>
+//         <input
+//          className="input-application"
+//           type="text"
+//           value={toSend.first_ref_name}
+//           onChange={handleChange}
+//           name="firstReferenceName"
+//           placeholder="First Reference Name..."
+//           required
+//         />
+//         <label htmlFor="firstReferenceNumber">Reference Number </label>
+//         <input
+//          className="input-application"
+//           type="number"
+//           value={toSend.first_ref_number}
+//           onChange={handleChange}
+//           name="firstReferenceNumber"
+//           placeholder="First Reference Number.."
+//           required
+//         />
+//         </div>
+//         <div>
+//         <label htmlFor="secondReferenceName">Reference Name </label>
+//         <input
+//          className="input-application"
+//           type="text"
+//           value={toSend.second_ref_name}
+//           onChange={handleChange} 
+//           name="secondReferenceName"
+//           placeholder="Second Reference Name..."
+//           required
+//         />
+//         <label htmlFor="secondReferenceNumber">Reference Number </label>
+//         <input
+//          className="input-application"
+//           type="number"
+//           value={toSend.second_ref_number}
+//           onChange={handleChange}
+//           name="secondReferenceNumber"
+//           placeholder="Second Reference Number..."
+//           required
+//         />
+//         </div>
+//         <Button type="submit">Submit</Button>
+//       </form>
+//     </div>
+//   );
+// }
+// export default Reservation;

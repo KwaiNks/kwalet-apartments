@@ -1,8 +1,6 @@
 
 function UserReservationList({ userApplication}){
 
-
-    console.log(userApplication)
     const date = userApplication.created_at.split("T")[0]
 
 return(

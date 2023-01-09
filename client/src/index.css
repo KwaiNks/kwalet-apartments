@@ -187,3 +187,7 @@ cursor: pointer;
 .lowlink{
   color: teal;
 }
+
+select{
+  width: 16rem;
+}

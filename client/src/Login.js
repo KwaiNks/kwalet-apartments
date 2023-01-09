@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { Button,Input} from 'semantic-ui-react'
 import { useNavigate } from "react-router-dom";
+
 
 function Login({ setUser }) {
   const [username, setUsername] = useState("");
@@ -33,24 +35,41 @@ function Login({ setUser }) {
 
         <div className="logininputs">
           <label htmlFor="username">Username</label>
-          <input
+          <Input  type="text"
+            id="username"
+            autoComplete="off"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)} 
+            icon='user' 
+            iconPosition='left' 
+            placeholder='Username...' 
+            />
+          {/* <input
             type="text"
             id="username"
             autoComplete="off"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username..."
-          />
+          /> */}
+
           <label htmlFor="password">Password</label>
-          <input
+          <Input type="password"
+            id="password"
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)} 
+            icon='key'
+            iconPosition='left'  placeholder="Password..."/>
+          {/* <input
             type="password"
             id="password"
             autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password..."
-          />
-          <button type="submit">Login</button>
+          /> */}
+          <Button type="submit">Login</Button>
         </div>
 
 

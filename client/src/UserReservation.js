@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UserReservationList from "./UserReservationList.js";
 
-function UserReservation({reservation}) {
+function UserReservation() {
 
   const [userApplications, setuserApplications] = useState([]);
 
